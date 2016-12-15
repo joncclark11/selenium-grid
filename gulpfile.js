@@ -16,14 +16,22 @@ gulp.task('serve:test', function(done) {
     }, done);
 });
 
-grunt.task('selenium', function(done) {
-    selenium.install({
-        logger: function(message) {}
-    }, function(err) {
-        if(err) return done(err);
-        selenium.child = child;
-        done();
+gulp.task('selenium', function(done) {
+  selenium.install({
+    logger: function (message) { }
+  }, function (err) {
+    if (err) {
+        return done(err);
+    }
+
+    selenium.start(function(err, child) {
+      if (err) {
+        return done(err);
+      }
+      selenium.child = child;
+      done();
     });
+  });
 });
 
 gulp.task('integration', ['serve:test', 'selenium'], function() {
