@@ -1,0 +1,28 @@
+{
+  "name": "selenium-grid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joncclark11/selenium-grid.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joncclark11/selenium-grid/issues"
+  },
+  "homepage": "https://github.com/joncclark11/selenium-grid#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^3.0.1",
+    "mocha": "^3.2.0",
+    "selenium-standalone": "^5.9.0",
+    "webdriverio": "^4.5.0"
+  }
+}
